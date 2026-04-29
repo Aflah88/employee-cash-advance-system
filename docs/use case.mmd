@@ -1,0 +1,20 @@
+flowchart TD
+    Pegawai["Pegawai"]
+    KPA["KPA"]
+    PPK["PPK"]
+    Form["Isi Form Permintaan UMK"]
+    Kirim["Kirim Permintaan"]
+    Verifikasi["Verifikasi Permintaan"]
+    Setujui["Setujui / Tolak"]
+    Proses["Proses Pencairan Dana"]
+
+    Pegawai --> Form
+    Pegawai --> Kirim
+
+    KPA --> Verifikasi
+    KPA --> Setujui
+
+    PPK --> Proses
+
+    Verifikasi --> Setujui
+    Setujui --> Proses
